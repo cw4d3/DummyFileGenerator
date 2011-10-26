@@ -1,7 +1,9 @@
-Dummygen
+:: Dummy File Generator ::
 ========================
 
-
+This is an application under construction. Eventually, it will allow the user to create 
+dummy files of different kinds (image, audio, video, document, executable, etc.) for use 
+in testing. The main area I see that may be the most useful is for testing file upload 
+validations for size restrictions and file type restrictions.
 ________________________
 
-License
