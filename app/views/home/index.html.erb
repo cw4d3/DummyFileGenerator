@@ -1,4 +1,24 @@
-<h3>Home</h3>
-<% @users.each do |user| %>
-  <p>User: <%=link_to user.name, user %></p>
-<% end %>
+<div class="sixteen columns">
+  <div id="offset-by-four">
+    <h3>Select File Type below:</h3>
+    <p>Only one file can be generated at a time</p>
+  </div>
+  <!--<% @users.each do |user| %>
+    <p>User: <%=link_to user.name, user %></p>
+  <% end %>-->
+</div>
+<div class="seven columns" id="file-box-container">
+  <p>Images</p>
+</div>
+
+<div class="seven columns" id="file-box-container">
+  <p>Documents</p>
+</div>
+
+<div class="seven columns" id="file-box-container">
+  <p>Video/Audio</p>
+</div>
+
+<div class="seven columns" id="file-box-container">
+  <p>Other</p>
+</div>

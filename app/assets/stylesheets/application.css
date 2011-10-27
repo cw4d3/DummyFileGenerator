@@ -25,4 +25,10 @@ header nav ul li {
   background-color: #FCC;
   border: solid 1px #C66;
 }
-
+#file-box-container {
+    font-size: 18px;
+    padding: 8px;
+    margin: 10px;
+    border: 2px solid #333;
+    border-radius: 8px;
+}
