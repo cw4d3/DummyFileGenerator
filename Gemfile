@@ -21,3 +21,4 @@ gem "database_cleaner", ">= 0.6.7", :group => :test
 gem "launchy", ">= 2.0.5", :group => :test
 gem "devise", ">= 1.4.7"
 gem "frontend-helpers"
+gem "simple_form"

@@ -158,6 +158,9 @@ GEM
       ffi (= 1.0.9)
       json_pure
       rubyzip
+    simple_form (1.5.2)
+      actionpack (~> 3.0)
+      activemodel (~> 3.0)
     sprockets (2.0.3)
       hike (~> 1.2)
       rack (~> 1.0)
@@ -195,5 +198,6 @@ DEPENDENCIES
   rails (= 3.1.1)
   rspec-rails (>= 2.6.1)
   sass-rails (~> 3.1.4)
+  simple_form
   sqlite3
   uglifier (>= 1.0.3)

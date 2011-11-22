@@ -7,18 +7,220 @@
     <p>User: <%=link_to user.name, user %></p>
   <% end %>-->
 </div>
-<div class="seven columns" id="file-box-container">
+<div class="seven columns clearfix" id="file-box-container">
   <p>Images</p>
+  <div class="seven columns alpha">
+    <form class="images">
+      <div class="alignbitch">
+        <input id="user_options_true" name="user[options]" type="radio" value="bmp" />
+        <label class="collection-radio" for="user_options_true">BMP</label>
+      </div>
+      
+      <div class="alignbitch">
+        <input id="user_options_false" name="user[options]" type="radio" value="jpeg" />
+        <label class="collection-radio" for="user_options_false">JPEG</label>
+      </div>
+      
+      <div class="alignbitch">
+        <input id="user_options_false" name="user[options]" type="radio" value="tif" />
+        <label class="collection-radio" for="user_options_false">TIF</label>
+      </div>
+      
+      <div class="alignbitch">
+        <input id="user_options_true" name="user[options]" type="radio" value="png" />
+        <label class="collection-radio" for="user_options_true">PNG</label>
+      </div>
+      
+      <div class="alignbitch">
+        <input id="user_options_false" name="user[options]" type="radio" value="gif" />
+        <label class="collection-radio" for="user_options_false">GIF</label>
+      </div>
+      
+      <div class="alignbitch">
+        <input id="user_options_false" name="user[options]" type="radio" value="tga" />
+        <label class="collection-radio" for="user_options_false">TGA</label>
+      </div>
+         
+    </div>
+      <div class="seven columns omega"></div>
 </div>
 
-<div class="seven columns" id="file-box-container">
+<div class="seven columns clearfix" id="file-box-container">
   <p>Documents</p>
+    <div class="alignbitch">
+        <input id="user_options_true" name="user[options]" type="radio" value="doc" />
+        <label class="collection-radio" for="user_options_true">DOC</label>
+      </div>
+      
+      <div class="alignbitch">
+        <input id="user_options_false" name="user[options]" type="radio" value="docx" />
+        <label class="collection-radio" for="user_options_false">DOCX</label>
+      </div>
+      
+      <div class="alignbitch">
+        <input id="user_options_false" name="user[options]" type="radio" value="txt" />
+        <label class="collection-radio" for="user_options_false">TXT</label>
+      </div>
+      
+      <div class="alignbitch">
+        <input id="user_options_true" name="user[options]" type="radio" value="pdf" />
+        <label class="collection-radio" for="user_options_true">PDF</label>
+      </div>
+      
+      <div class="alignbitch">
+        <input id="user_options_false" name="user[options]" type="radio" value="rtf" />
+        <label class="collection-radio" for="user_options_false">RTF</label>
+      </div>
+      
+      <div class="alignbitch">
+        <input id="user_options_false" name="user[options]" type="radio" value="odt" />
+        <label class="collection-radio" for="user_options_false">ODT</label>
+      </div>
+    
 </div>
 
-<div class="seven columns" id="file-box-container">
+<div class="seven columns clearfix" id="file-box-container">
   <p>Video/Audio</p>
+    <div class="alignbitch">
+        <input id="user_options_true" name="user[options]" type="radio" value="mov" />
+        <label class="collection-radio" for="user_options_true">MOV</label>
+      </div>
+      
+      <div class="alignbitch">
+        <input id="user_options_false" name="user[options]" type="radio" value="avi" />
+        <label class="collection-radio" for="user_options_false">AVI</label>
+      </div>
+      
+      <div class="alignbitch">
+        <input id="user_options_false" name="user[options]" type="radio" value="mpg" />
+        <label class="collection-radio" for="user_options_false">MPG</label>
+      </div>
+      
+      <div class="alignbitch">
+        <input id="user_options_true" name="user[options]" type="radio" value="mpeg" />
+        <label class="collection-radio" for="user_options_true">MPEG</label>
+      </div>
+      
+      <div class="alignbitch">
+        <input id="user_options_false" name="user[options]" type="radio" value="mp4" />
+        <label class="collection-radio" for="user_options_false">MP4</label>
+      </div>
+      
+      <div class="alignbitch">
+        <input id="user_options_false" name="user[options]" type="radio" value="mkv" />
+        <label class="collection-radio" for="user_options_false">MKV</label>
+      </div>
+      
+      <div class="seven columnx omega">
+        <div class="alignbitch">
+          <input id="user_options_false" name="user[options]" type="radio" value="mp3" />
+          <label class="collection-radio" for="user_options_false">MP3</label>
+        </div>
+        
+        <div class="alignbitch">
+          <input id="user_options_false" name="user[options]" type="radio" value="ogg" />
+          <label class="collection-radio" for="user_options_false">OGG</label>
+        </div>
+        
+        <div class="alignbitch">
+          <input id="user_options_false" name="user[options]" type="radio" value="wav" />
+          <label class="collection-radio" for="user_options_false">WAV</label>
+        </div>
+        
+        <div class="alignbitch">
+          <input id="user_options_false" name="user[options]" type="radio" value="wma" />
+          <label class="collection-radio" for="user_options_false">WMA</label>
+        </div>
+        
+        <div class="alignbitch">
+          <input id="user_options_false" name="user[options]" type="radio" value="aiff" />
+          <label class="collection-radio" for="user_options_false">AIFF</label>
+        </div>
+      </div>
 </div>
 
 <div class="seven columns" id="file-box-container">
   <p>Other</p>
+    <div class="alignbitch">
+        <input id="user_options_true" name="user[options]" type="radio" value="pl" />
+        <label class="collection-radio" for="user_options_true">PL</label>
+      </div>
+      
+      <div class="alignbitch">
+        <input id="user_options_false" name="user[options]" type="radio" value="rb" />
+        <label class="collection-radio" for="user_options_false">RB</label>
+      </div>
+      
+      <div class="alignbitch">
+        <input id="user_options_false" name="user[options]" type="radio" value="php" />
+        <label class="collection-radio" for="user_options_false">PHP</label>
+      </div>
+      
+      <div class="alignbitch">
+        <input id="user_options_true" name="user[options]" type="radio" value="sql" />
+        <label class="collection-radio" for="user_options_true">SQL</label>
+      </div>
+      
+      <div class="alignbitch">
+        <input id="user_options_false" name="user[options]" type="radio" value="py" />
+        <label class="collection-radio" for="user_options_false">PY</label>
+      </div>
+      
+      <div class="alignbitch">
+        <input id="user_options_false" name="user[options]" type="radio" value="ini" />
+        <label class="collection-radio" for="user_options_false">INI</label>
+      </div>
+      
+      <div class="seven columnx omega">
+        <div class="alignbitch">
+          <input id="user_options_false" name="user[options]" type="radio" value="bat" />
+          <label class="collection-radio" for="user_options_false">BAT</label>
+        </div>
+        
+        <div class="alignbitch">
+          <input id="user_options_false" name="user[options]" type="radio" value="js" />
+          <label class="collection-radio" for="user_options_false">JS</label>
+        </div>
+        
+        <div class="alignbitch">
+          <input id="user_options_false" name="user[options]" type="radio" value="css" />
+          <label class="collection-radio" for="user_options_false">CSS</label>
+        </div>
+        
+        <div class="alignbitch">
+          <input id="user_options_false" name="user[options]" type="radio" value="html" />
+          <label class="collection-radio" for="user_options_false">HTML</label>
+        </div>
+        
+        <div class="alignbitch">
+          <input id="user_options_false" name="user[options]" type="radio" value="xml" />
+          <label class="collection-radio" for="user_options_false">XML</label>
+        </div>
+      </div>
 </div>
+
+<div class="ten columns offset-by-two">
+  <div class="ten columns" id="details-box">
+    <p>Final Details</p>
+    <div class="final-details-wrapper">
+      <label id="final-details" for="size">How large? (in MB)</label>
+      <input type="textarea" name="size" value="" size="3">
+    </div>
+      
+    <div class="final-details-wrapper">
+      <label id="final-details" for="executable">Attempt to make this file an executable?</label>
+      <input id="" type="checkbox" name="executable" value="">
+    </div>
+    
+    <div class="final-details-wrapper">
+      <label id="final-details" for="save-location">Where would you like to save it?</label>
+      <input id="" type="file" name="save-location" value="">
+    </div>
+    
+    <div class="final-details-wrapper">
+      <input class="full-width remove-bottom" type="submit" name="submit" value="Generate!">
+    </div>
+  </div>
+</div>
+
+
