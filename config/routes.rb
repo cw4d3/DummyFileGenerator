@@ -1,7 +1,13 @@
 Dummygen::Application.routes.draw do
+  #get "dummyfiles/index"
+
+  get "dummyfiles/show"
+
+  get "dummyfiles/new"
+
   #get \"users\/show\"
 
-  root :to => "home#index"
+  root :to => "dummyfiles#index"
 
   devise_for :users
   resources :users, :only => :show

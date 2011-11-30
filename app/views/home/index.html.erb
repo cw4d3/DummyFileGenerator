@@ -6,11 +6,14 @@
   <!--<% @users.each do |user| %>
     <p>User: <%=link_to user.name, user %></p>
   <% end %>-->
+  
 </div>
 <div class="seven columns clearfix" id="file-box-container">
   <p>Images</p>
   <div class="seven columns alpha">
-    <form class="images">
+    <%= simple_form_for @dummyfile do |f| %>
+      <%= f.input :filetype %>
+      <%= f.input :filename %>
       <div class="alignbitch">
         <input id="user_options_true" name="user[options]" type="radio" value="bmp" />
         <label class="collection-radio" for="user_options_true">BMP</label>
@@ -208,13 +211,8 @@
     </div>
       
     <div class="final-details-wrapper">
-      <label id="final-details" for="executable">Attempt to make this file an executable?</label>
+      <label id="final-details" for="executable">Disguise this file as an executable? (Creates an executable with false extension) </label>
       <input id="" type="checkbox" name="executable" value="">
-    </div>
-    
-    <div class="final-details-wrapper">
-      <label id="final-details" for="save-location">Where would you like to save it?</label>
-      <input id="" type="file" name="save-location" value="">
     </div>
     
     <div class="final-details-wrapper">
@@ -222,5 +220,4 @@
     </div>
   </div>
 </div>
-
-
+<% end %>

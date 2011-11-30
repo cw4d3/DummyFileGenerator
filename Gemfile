@@ -22,3 +22,5 @@ gem "launchy", ">= 2.0.5", :group => :test
 gem "devise", ">= 1.4.7"
 gem "frontend-helpers"
 gem "simple_form"
+gem "rmagick"
+gem "pdf-writer"

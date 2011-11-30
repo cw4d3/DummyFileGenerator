@@ -1,15 +1,13 @@
-class HomeController < ApplicationController
+class DummyfilesController < ApplicationController
   def index
-    @users = User.all
     @dummyfiles = Dummyfile.all
   end
-  
-  def create
-    #@user = User.new
-  end
-  
+
   def show
-    #@user = User.params([:id])
+  end
+
+  def new
+    @dummyfile = Dummyfile.new
   end
   
   def execute
@@ -23,7 +21,4 @@ class HomeController < ApplicationController
       redirect_to :action => 'index'
     end
   end
-  #def delete
-  #  @user = User.params([:id]).delete(:method => delete)
-  #end
 end
