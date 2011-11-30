@@ -41,7 +41,7 @@ SimpleForm.setup do |config|
   # config.collection_wrapper_tag = nil
 
   # You can wrap each item in a collection of radio/check boxes with a tag, defaulting to span.
-  # config.item_wrapper_tag = :span
+  config.item_wrapper_tag = nil #:span
 
   # Series of attempts to detect a default label method for collection.
   # config.collection_label_methods = [ :to_label, :name, :title, :to_s ]
@@ -53,10 +53,10 @@ SimpleForm.setup do |config|
   # config.label_text = lambda { |label, required| "#{required} #{label}" }
 
   # You can define the class to use on all labels. Default is nil.
-  # config.label_class = nil
+  config.label_class = :collection_radio
 
   # You can define the class to use on all forms. Default is simple_form.
-  # config.form_class = :simple_form
+  config.form_class = nil #:simple_form
 
   # Whether attributes are required by default (or not). Default is true.
   # config.required_by_default = true
@@ -86,7 +86,7 @@ SimpleForm.setup do |config|
   # config.country_priority = nil
 
   # Default size for text inputs.
-  # config.default_input_size = 50
+config.default_input_size = 3
 
   # When false, do not use translations for labels, hints or placeholders.
   # config.translate = true

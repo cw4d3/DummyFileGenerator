@@ -17,13 +17,13 @@
 <body class="<%= params[:controller] %>">
   <div id="container" class="container">
     <header>
-        <nav>
+        <!--<nav>
           <div class="sixteen columns">
             <ul class="hmenu">
               <%= render 'shared/navigation' %>
             </ul>
           </div>
-        </nav>
+        </nav>-->
       <%- flash.each do |name, msg| -%>
         <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
       <%- end -%>

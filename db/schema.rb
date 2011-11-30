@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111026195210) do
+ActiveRecord::Schema.define(:version => 20111129203554) do
+
+  create_table "dummyfiles", :force => true do |t|
+    t.string   "filetype"
+    t.integer  "size"
+    t.string   "filename"
+    t.boolean  "executable"
+    t.string   "state"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
