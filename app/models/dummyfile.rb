@@ -31,40 +31,36 @@ class Dummyfile < ActiveRecord::Base
     else
       self.failure!
     end
-    #if success && $?.exitstatus == 0
-    #  self.converted!
-    #else
-    #  self.failure!
-    #end
   end
 
 #  protected
   
   def convert_command
-    puts "convert_video called"
+    puts "convert_command called"
   #construct new file extension
-    @flv =  "public_filename" + "." + id.to_s + ".flv"
+    @flv =  "public_filename" + "." + id.to_s + "." + filetype.to_s
   
   #build the command to execute ffmpeg
     command = <<-end_command
-     ffmpeg -i /Users/cwade/Sites/dummygen/public/templates/video.mp4 -ar 22050 -ab 32 -s 480x360 -vcodec flv -r 25 -qscale 8 -f flv -y /Users/cwade/Sites/dummygen/public/generated/#{@flv}
+     ffmpeg -i /Users/chriswade/Nerdery/vagrant/shared/DummyFileGenerator/public/templates/video.mp4 -ar 22050 -ab 32 -s 480x360 -vcodec flv -r 25 -qscale 8 -f flv -y /Users/chriswade/Nerdery/vagrant/shared/DummyFileGenerator/public/generated/#{@flv}
     end_command
     
     logger.debug "Generating...command: " + command
     command
-    #     ffmpeg -i #{ RAILS_ROOT + '/public' + public_filename }  -ar 22050 -ab 32 -s 480x360 -vcodec flv -r 25 -qscale 8 -f flv -y #{ RAILS_ROOT + '/public' + public_filename + flv }
+    #ffmpeg -i /Users/cwade/Sites/dummygen/public/templates/video.mp4 -ar 22050 -ab 32 -s 480x360 -vcodec flv -r 25 -qscale 8 -f flv -y /Users/cwade/Sites/dummygen/public/generated/#{@flv}
+    #ffmpeg -i #{ RAILS_ROOT + '/public' + public_filename }  -ar 22050 -ab 32 -s 480x360 -vcodec flv -r 25 -qscale 8 -f flv -y #{ RAILS_ROOT + '/public' + public_filename + flv }
     # && dd if=/dev/zero of=/Users/cwade/Sites/dummygen/public/generated/#{flv} bs=1 count=0 seek=500
   end
   
-  def dd_command
-    puts "dd_command called"
-    command = <<-end_command
-     dd if=/dev/zero of=/Users/cwade/Sites/dummygen/public/generated/#{@flv} bs=1 count=0 seek=#{@size_in_bytes.to_s}
-    end_command
-    
-    logger.debug "Adding payload...command: " + command
-    command
-  end
+  #def dd_command
+  #  puts "dd_command called"
+  #  command = <<-end_command
+  #   dd if=/dev/zero of=/Users/cwade/Sites/dummygen/public/generated/#{@flv} bs=1 count=0 seek=#{@size_in_bytes.to_s}
+  #  end_command
+  #  
+  #  logger.debug "Adding payload...command: " + command
+  #  command
+  #end
   #def convert_audio
   #  puts "convert_audio called"
   ##construct new file extension

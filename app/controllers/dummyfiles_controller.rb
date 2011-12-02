@@ -1,8 +1,4 @@
-class DummyfilesController < ApplicationController
-  def index
-    @dummyfiles = Dummyfile.all
-  end
-  
+class DummyfilesController < ApplicationController  
   def create
     @dummyfile     = Dummyfile.new(params[:dummyfile])
     @filetype      = params[:filetype]
@@ -19,7 +15,7 @@ class DummyfilesController < ApplicationController
         puts "controller audio loop"
         @dummyfile.convert_audio
       
-      elsif @filetype == "mov" or @filetype == "avi" or @filetype == "mpg" or @filetype == "mp4"  or @filetype == "mkv"
+      elsif @filetype == "mov" or @filetype == "avi" or @filetype == "mpg" or @filetype == "mpeg" or @filetype == "mp4"  or @filetype == "mkv"
         puts "controller video loop"
         @dummyfile.convert
       
@@ -33,14 +29,9 @@ class DummyfilesController < ApplicationController
       end
       
       if @dummyfile.state == "converted"
-      puts "dummyfile state is converted...do the dd here #{@size_in_bytes}"
-      #command = <<-end_command
-      #  `dd if=/dev/zero of=/Users/cwade/Sites/dummygen/public/generated/public_filename.#{@dummyfile.id}.flv bs=1 count=0 seek=#{@size_in_bytes}`
-      #end_command
-      #
-      #logger.debug "Adding payload...command: " + command
-      #command
-      `dd if=/dev/zero of=/Users/cwade/Sites/dummygen/public/generated/public_filename.#{@dummyfile.id}.flv bs=1 count=0 seek=#{@size_in_bytes}`
+      puts "dummyfile state is converted...do the dd here #{@size_in_bytes.is_a?}"
+      #`dd if=/dev/zero of=/Users/cwade/Sites/dummygen/public/generated/public_filename.#{@dummyfile.id}.#{@filetype} bs=1 count=0 seek=#{@size_in_bytes}`
+      `dd if=/dev/zero of=/Users/chriswade/Nerdery/vagrant/shared/DummyFileGenerator/public/generated/public_filename.#{@dummyfile.id}.#{@filetype} bs=1 count=0 seek=#{@size_in_bytes}`
       end
       
       flash[:notice] = 'Your ' + @size + 'MB ' + @filetype.upcase + ' file has been generated. ' + ' Bytes: ' + @size_in_bytes.to_s
@@ -51,7 +42,11 @@ class DummyfilesController < ApplicationController
       redirect_to :action => 'index'
     end
   end
-
+  
+  def index
+    @dummyfiles = Dummyfile.all
+  end
+  
   def new
     @dummyfile = Dummyfile.new
   end
