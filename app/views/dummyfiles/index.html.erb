@@ -2,12 +2,13 @@
 
 <div class="sixteen columns">
   <div id="offset-by-four">
-    <h3>Select File Type below:</h3>
+    <h3>Select a File Type and Size below:</h3>
     <p>Only one file can be generated at a time</p>
   </div>
 </div>
 
-<%= form_tag do %>
+<%= form_tag({:controller => "dummyfiles", :action => "create"}, :method => "get") %>
+
 <div class="seven columns clearfix" id="file-box-container">
   <p>Images</p>
     <!--<div class="seven columns alpha">-->
@@ -269,7 +270,7 @@
   <div class="ten columns" id="details-box">
     <p>Final Details</p>
     <div class="final-details-wrapper">
-      <%= label_tag(:size, "How large? (in MB)", :id => 'final-details') %>
+      <%= label_tag(:size, "How large? (in MB, 999 max, numbers only please)", :id => 'final-details') %>
       <%= text_field_tag(:size) %>
       <!--<label id="final-details" for="size">How large? (in MB)</label>
       <input type="textarea" name="size" value="" size="3">-->
@@ -283,9 +284,9 @@
     </div>
     
     <div class="final-details-wrapper">
-      <%= submit_tag("Generate!") %>
-    <% end %>
+      <%= submit_tag("Generate!", :class => "full-width remove-bottom") %>
       <!--<input class="full-width remove-bottom" type="submit" name="submit" value="Generate!">-->
     </div>
   </div>
 </div>
+
