@@ -46,10 +46,10 @@ header nav ul li {
     width: 100%;
     margin-bottom: 15px;
 }
-.alignbitch-wrapper {
+.radio-item-wrapper {
     width: 70px;
 }
-.alignbitch {
+.radio-item {
     width: 65px;
     float: left;
     margin-bottom: 15px;

@@ -30,8 +30,8 @@ class DummyfilesController < ApplicationController
       
       if @dummyfile.state == "converted"
       puts "dummyfile state is converted...do the dd here #{@size_in_bytes.is_a?}"
-      #`dd if=/dev/zero of=/Users/cwade/Sites/dummygen/public/generated/public_filename.#{@dummyfile.id}.#{@filetype} bs=1 count=0 seek=#{@size_in_bytes}`
-      `dd if=/dev/zero of=/Users/chriswade/Nerdery/vagrant/shared/DummyFileGenerator/public/generated/public_filename.#{@dummyfile.id}.#{@filetype} bs=1 count=0 seek=#{@size_in_bytes}`
+      `dd if=/dev/zero of=/Users/cwade/Sites/dummygen/public/generated/public_filename.#{@dummyfile.id}.#{@filetype} bs=1 count=0 seek=#{@size_in_bytes}`
+      #`dd if=/dev/zero of=/Users/chriswade/Nerdery/vagrant/shared/DummyFileGenerator/public/generated/public_filename.#{@dummyfile.id}.#{@filetype} bs=1 count=0 seek=#{@size_in_bytes}`
       end
       
       flash[:notice] = 'Your ' + @size + 'MB ' + @filetype.upcase + ' file has been generated. ' + ' Bytes: ' + @size_in_bytes.to_s
@@ -51,15 +51,15 @@ class DummyfilesController < ApplicationController
     @dummyfile = Dummyfile.new
   end
   
-  def execute
-    @dummyfile = Dummyfile.new(params[:dummyfile])
-    if @dummyfile.save
-      @dummyfile.convert
-      flash[:notice] = 'Your file has been generated.'
-      redirect_to :action => 'index'
-    else
-      flash[:notice] = 'There was a problem generating your file. Please try again.'
-      redirect_to :action => 'index'
-    end
-  end
+  #def execute
+  #  @dummyfile = Dummyfile.new(params[:dummyfile])
+  #  if @dummyfile.save
+  #    @dummyfile.convert
+  #    flash[:notice] = 'Your file has been generated.'
+  #    redirect_to :action => 'index'
+  #  else
+  #    flash[:notice] = 'There was a problem generating your file. Please try again.'
+  #    redirect_to :action => 'index'
+  #  end
+  #end
 end

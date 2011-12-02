@@ -42,12 +42,12 @@ class Dummyfile < ActiveRecord::Base
   
   #build the command to execute ffmpeg
     command = <<-end_command
-     ffmpeg -i /Users/chriswade/Nerdery/vagrant/shared/DummyFileGenerator/public/templates/video.mp4 -ar 22050 -ab 32 -s 480x360 -vcodec flv -r 25 -qscale 8 -f flv -y /Users/chriswade/Nerdery/vagrant/shared/DummyFileGenerator/public/generated/#{@flv}
+     ffmpeg -i /Users/cwade/Sites/dummygen/public/templates/video.mp4 -ar 22050 -ab 32 -s 480x360 -vcodec flv -r 25 -qscale 8 -f flv -y /Users/cwade/Sites/dummygen/public/generated/#{@flv}
     end_command
     
     logger.debug "Generating...command: " + command
     command
-    #ffmpeg -i /Users/cwade/Sites/dummygen/public/templates/video.mp4 -ar 22050 -ab 32 -s 480x360 -vcodec flv -r 25 -qscale 8 -f flv -y /Users/cwade/Sites/dummygen/public/generated/#{@flv}
+    #ffmpeg -i /Users/chriswade/Nerdery/vagrant/shared/DummyFileGenerator/public/templates/video.mp4 -ar 22050 -ab 32 -s 480x360 -vcodec flv -r 25 -qscale 8 -f flv -y /Users/chriswade/Nerdery/vagrant/shared/DummyFileGenerator/public/generated/#{@flv}
     #ffmpeg -i #{ RAILS_ROOT + '/public' + public_filename }  -ar 22050 -ab 32 -s 480x360 -vcodec flv -r 25 -qscale 8 -f flv -y #{ RAILS_ROOT + '/public' + public_filename + flv }
     # && dd if=/dev/zero of=/Users/cwade/Sites/dummygen/public/generated/#{flv} bs=1 count=0 seek=500
   end
