@@ -26,7 +26,6 @@ class Dummyfile < ActiveRecord::Base
     self.convert!
     success = system(convert_command)
     if success && $?.exitstatus == 0
-      #success = system(dd_command)
       self.converted!
     else
       self.failure!

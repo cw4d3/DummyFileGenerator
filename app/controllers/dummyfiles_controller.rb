@@ -7,24 +7,24 @@ class DummyfilesController < ApplicationController
     
     if @dummyfile.save
       if @filetype == "bmp" or @filetype == "jpeg" or @filetype == "tif" or @filetype == "png"  or @filetype == "gif" or @filetype == "tga"
-        puts "controller image loop"
+        puts "controller image block"
         @dummyfile.convert_image
         @convert_method = convert_image
       
       elsif @filetype == "mp3" or @filetype == "ogg" or @filetype == "wma" or @filetype == "aiff"  or @filetype == "wav"
-        puts "controller audio loop"
+        puts "controller audio block"
         @dummyfile.convert_audio
       
       elsif @filetype == "mov" or @filetype == "avi" or @filetype == "mpg" or @filetype == "mpeg" or @filetype == "mp4"  or @filetype == "mkv"
-        puts "controller video loop"
+        puts "controller video block"
         @dummyfile.convert
       
       elsif @filetype == "doc" or @filetype == "docx"
-        puts "controller doc loop"
+        puts "controller doc block"
         @dummyfile.convert_doc
       
       elsif @filetype == "pdf"
-        puts "controller pdf loop"
+        puts "controller pdf block"
         @dummyfile.convert_pdf
       end
       
